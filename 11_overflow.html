@@ -1,0 +1,57 @@
+<!-- "overflow: " = serve para tratar um conteúdo que excede um determinado elemento -->
+
+<!doctype html>
+<!-- doctype = informa ao browser a versão HTML que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+
+        <style>
+            div{
+                padding: 2%;
+                margin: 2%;
+                border: 1px solid black;
+                width: 15%;
+                float: left;
+                height: 100px;
+                font-family: sans-serif;
+                font-size: 1rem;
+            }
+
+            .div-one{
+                overflow: visible; /* "overflow: visible" = deixa o conteúdo 100% visível, mesmo se passar do tamanho do elemento */ 
+            }
+
+            .div-two{
+                overflow: hidden; /* "overflow: hideden" = esconde parte do conteúdo para que caíba dentro do elemento */
+            }
+
+            .div-three{
+                overflow: scroll; /* "overflow: scroll" = cria uma barra de rolagem para que possamos ver todo o conteúdo que está dentro do elemento */
+            }
+
+            .div-four{
+                overflow: auto; /* "overflow: auto" = se precisar de barra de rolagem, automaticamente é colocado */
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="div-one">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem soluta ex facere harum sunt ea fugiat tenetur laudantium, ullam natus labore modi rem. Distinctio mollitia incidunt animi voluptatem excepturi vitae?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem soluta ex facere harum sunt ea fugiat tenetur laudantium, ullam natus labore modi rem. Distinctio mollitia incidunt animi voluptatem excepturi vitae?</p>
+        </div>
+        <div class="div-two">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem soluta ex facere harum sunt ea fugiat tenetur laudantium, ullam natus labore modi rem. Distinctio mollitia incidunt animi voluptatem excepturi vitae?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem soluta ex facere harum sunt ea fugiat tenetur laudantium, ullam natus labore modi rem. Distinctio mollitia incidunt animi voluptatem excepturi vitae?</p>
+        </div>
+        <div class="div-three">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem soluta ex facere harum sunt ea fugiat tenetur laudantium, ullam natus labore modi rem. Distinctio mollitia incidunt animi voluptatem excepturi vitae?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem soluta ex facere harum sunt ea fugiat tenetur laudantium, ullam natus labore modi rem. Distinctio mollitia incidunt animi voluptatem excepturi vitae?</p>
+        </div>
+        <div class="div-four">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem soluta ex facere harum sunt ea fugiat tenetur laudantium, ullam natus labore modi rem. Distinctio mollitia incidunt animi voluptatem excepturi vitae?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem soluta ex facere harum sunt ea fugiat tenetur laudantium, ullam natus labore modi rem. Distinctio mollitia incidunt animi voluptatem excepturi vitae?</p>
+        </div>
+    </body>
+</html>

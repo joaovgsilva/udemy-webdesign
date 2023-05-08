@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- doctype = informa ao browser a versão HTML que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <link rel="stylesheet" href="07_primeiroProjeto.css">
+    </head>
+    <body>
+        <header> <!-- TAG semântica que indica o "cabeçalho" da página -->
+            <nav> <!-- TAG semântica que indica que a página tem um "menu" -->
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="header-title">
+                <h1>CURSO WEB DESIGN</h1>
+                <p>Aprenda HTML, CSS e Javascript</p>
+            </div>
+        </header>
+        <main> <!-- TAG semântica que indica o "conteúdo principal" da página -->
+            <section class="main-section"> <!-- "section" significa que o conteúdo inter está relacionado a um único tema -->
+                <div class="card card-1">
+                    <img src="Documentos/732212.png" alt="Logotipo HTML">
+                    <p>HTML5</p>
+                </div>
+                <div class="card card-2">
+                    <img src="Documentos/logo-css-3-2048.png" alt="Logotipo CSS">
+                    <p>CSS3</p>
+                </div>
+                <div class="card card-3">
+                    <img src="Documentos/logo-javascript-icon-1024.png" alt="Logotipo JAVASCRIPT">
+                    <p>JAVASCRIPT</p>
+                </div>
+            </section>
+            <section class="main-section">
+                <article class="header-article"> <!-- "article" é utilizado para isolar um determinado conteúdo -->
+                    <div><h2>Título</h2></div>
+                    <p>Primeiro parágrafo de exemplo</p>
+                    <p>Segundo parágrafo de exemplo</p>
+                </article>
+            </section>
+        </main>
+        <footer> <!-- TAG semântica o "rodapé" da página -->
+            <p>Copyrigth &copy; 2023</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<!-- doctype = informa ao browser a versão HTML que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+
+        <style>
+            
+            #um{
+                background: red;
+                padding: 10px;
+                width: 100%;
+                height: 80px;
+            }
+
+            #dois{
+                background: orange;
+                padding: 10px;
+                width: 80%;
+                height: 50px;
+                position: relative; /* "position: relative" = se relaciona com ele mesmo e com o elemento que receber "position: absolute" */ 
+            }
+
+            #tres{
+                background: yellow;
+                width: 25px;
+                height: 25px;
+                position: absolute; /* por padrão, o "position: absolute" se relaciona com a página, a partir do momento que algum elemento recebe o "position: relative", o "abusolute" começa se relacionar com o documento "relative" */
+                bottom: 10px;
+                right: 10px;
+            }
+
+            /* 
+                position: fixed; = o conteúdo que estiver dentro do elemento permanecerá fixo no browser após receber o "position: fixed", ao contrário do "absolute", que fica relacionado com a página 
+            */ 
+
+        </style>
+
+    </head>
+    <body>
+
+        <h1>Position</h1>
+
+        <p><a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</a></p>
+
+        <div id="container">
+
+            <div id="um"> 1 
+                <div id="dois"> 2 
+                    <div id="tres"> 3 </div>
+                </div>
+            </div>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam vitae harum illo reiciendis, aspernatur corporis molestias, numquam perspiciatis, maxime quas eos voluptatum rerum. Nihil adipisci quia expedita quod quae laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam vitae harum illo reiciendis, aspernatur corporis molestias, numquam perspiciatis, maxime quas eos voluptatum rerum. Nihil adipisci quia expedita quod quae laborum.
+            </p>
+
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<!-- doctype = informa ao browser a versão HTML que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            h1{
+                font-size: 48px;
+                font-style: normal;
+                font-variant: small-caps;
+                color: orange;
+                background-color: yellow;
+                margin-left: 0px; /* "margin" = margem externa */
+                margin-top: 50px;
+                margin-bottom: 50px;
+                padding-left: 25px; /* "padding" = margem interna */
+                padding-top: 50px;
+                padding-bottom: 50px;
+                padding-right: 25px;
+                width: auto; /* "width" = largura */
+                height: auto; /* "height" = altura */
+
+            }
+
+            h2{
+                text-transform: uppercase;
+                color: orangered;
+                border-bottom-color: blueviolet; /* "border" = define uma borda, porém para funcinar, é preciso de três propriedades: "border-style" = estilo da borda; "border-width" = tamanho/espessura da borda; "border-color" = cor da borda; */
+                border-bottom-style: dotted;
+                border-bottom-width: 5px;
+                padding: 25px;
+            }
+
+            p{
+                font-variant: normal;
+                text-align: left;
+                text-decoration: underline;
+                text-indent: 50px; /* "text-indent:" = define o tamanho do início do parágrafo */
+                text-transform: none; /* "text-transform:" = permite deixar o parágrafo inteiro em MAIÚSCULO ou minuscúlo */
+                margin-bottom: 30px;
+            }
+
+            .destaque{
+                color: red;
+                border: solid 2px blueviolet;
+                padding: 10px;
+                text-indent: 35px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>Introdução ao CSS</h1>
+        <h2>Subtítulo</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        <p class="destaque">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p> 
+        <p>Desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<!-- doctype = informa ao browser a versão HTML que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        
+        <style>
+            body{
+                font-family: sans-serif;
+            }
+
+            a{
+                color: red;
+            }
+
+            a:hover{
+                color: blue;
+            }
+
+            a:visited{ /* "a:visited" = link visitado, ou seja, quando já abrimos o link mais de uma vez */
+                color: green
+            }
+
+            a:active{ /* a:active" = é o efeito do click no link */
+                color: orange;
+            }
+            
+            ul li{
+                list-style-type: circle;
+            }
+            ol li{
+                list-style-type: upper-roman;
+                list-style-position: inside; /* "list-style-position" = modifica a posição da lista: internamente (list-style-position: inside) ou externamente (list-style-position: outside) */
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <a href="00_currículo.html">Veja o arquivo "00_currículo.html"</a> |
+        <a href="02_introduçãoCSS.html">Veja o arquivo "02_introduçãoCSS.html"</a>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+    </body>
+</html>

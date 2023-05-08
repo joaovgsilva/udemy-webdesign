@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- doctype = informa ao browser a versão HTML que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+    </head>
+    <body>
+        <h1>Exemplo de Formulário</h1>
+        <form action="http://google.com/search" method="GET" target="_blank"> <!-- "form action= " = seria o servidor que vai realizar a busca do dado que o usuário colocar dentro do "input"; "target="_blank"" = faz com que o browser abra uma nova guia ao invés de utilizar a mesma página do projeto -->
+            <label for="txt-title">Título</label>
+            <input type="text" name="q" id="txt-title" placeholder="Faça sua busca no Google"> <!-- "inpout" = TAG utilizada para entrada de dados -->
+            <input type="submit" value="Pesquisar">
+        </form>
+        <br>
+        <hr>
+        <br>
+        <form>
+            <fieldset>
+                <legend>Login</legend>
+                <label for="user-login">Usuário</label>
+                <input type="text" name="user-login" id="user-login">
+                <br>
+                <label for="user-password">Senha</label>
+                <input type="password" name="user-password" id="user-password">
+                <br>
+                <input type="submit" name="submit" value="Login">
+            </fieldset>
+        </form>
+    </body>
+</html> 

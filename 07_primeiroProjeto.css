@@ -1,0 +1,114 @@
+body{
+    font-family: arial, sans-serif;
+    background-color: #ccc;
+    margin: 0;
+}
+
+header{
+    background-image: url(Documentos/bg-2.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; /* "background-size: cover" = preenche todo o espaço da TAG, mesmo que esconda um pedaço da imagem */
+    border-top: 1px solid transparent;
+}
+
+header nav ul{
+    text-align: right;
+    margin: 25px 25px 0 0;
+}
+
+header nav li{
+    display: inline-block; /* "display: inline-block" = faz com que todo elemento preenchem uma única linha, permitindo alteração na largura e altura do conteúdo */ 
+    list-style: none;
+    margin-left: 10px;
+    border: 1px solid white;
+
+}
+
+header nav a{
+    background: rgba(0, 0, 0, 0.3); /* "background: rbga" = permite criação de cor transparente */
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px; /* "letter-spacing: " = TAG usada para dar espaço entre uma letra e outra */
+}
+
+header nav a:hover{
+    background: rgba(0,0,0,0.5);
+}
+
+.header-title{
+    text-align: center;
+    color: white;
+    margin-top: 150px;
+}
+
+.header-title h1{
+    text-transform: uppercase; /* "text-transform: uppercase" = transforma o texto inteiro em maiúsculo  */
+    font-size: 50px;
+    text-shadow: 3px 3px 2px #333; /* "text-shadow: " = permite criar sombra no texto, alterando tamanho, distância e cor */ 
+}
+
+.header-title p{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 10px;
+    border-bottom: 2px solid white;
+}
+
+main{
+    width: 80%;
+    margin: auto;
+}
+
+.main-section{
+    background-color: white;
+    padding: 10px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    width: 33%;
+    margin-left: 12px;
+}
+
+.card img {
+    width: 100%
+}
+
+.card p{
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
+    margin: 0;
+    text-align: center;
+    padding: 7px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header-article{
+    border-bottom: solid 2px #ccc;
+    padding: 10px 150px;
+    background: #eee;
+}
+
+.header-article h2{
+    text-align: center;
+    margin: 0;
+}
+
+footer{
+    height: 80px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    background: #6b6c68;
+    line-height: 80px; /* quando houver apenas uma linha de texto dentro da TAG, é possível usar o "line-height: " com o mesmo valor do "height: " para centralizar o conteúdo */ 
+}
