@@ -1,0 +1,75 @@
+<!doctype html>
+<!-- doctype = informa ao browser a versão HTML que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+
+        <style>
+            /* font-face*/
+            @font-face {
+                font-family: 'PoppinsRegular';
+                src: url(Documentos/Poppins-Regular.ttf) format('truetype');
+            }
+
+            html, body{
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            body{
+                background-color: rgb(0, 92, 197);
+                /* linear-gradient */
+                background-image: linear-gradient(to top, rgb(0, 92, 197), rgb(90, 20, 220)); /* é preciso declarar a direção da imagem e colocar pelo menos 2 valores de cores para que o liner-gradient crie o efeito degradê */
+                background-repeat: no-repeat;
+            }
+
+            h1{
+                font-family: PoppinsRegular;
+                font-size: 50px;
+                text-align: center;
+                /* text-shadow */
+                text-shadow: -10px -10px 0 blue, 10px 10px 0 red; /* ao contrário do 'box-shadow', o 'text-shadow' não permite alterar o tamanho da sombra */
+            }
+
+            #radius{
+                background: orange;
+                width: 200px;
+                height: 200px;
+                margin: 50px auto;
+
+                /* border-radius */
+                border-radius: 50px 100px / 100px 50px; /* 1º valor = canto superior esquerdo; 2º valor = canto superior direito; 3º valor = canto inferior direito; 4º valor = canto inferior esquerdo */
+
+                /* box-shadow */
+                box-shadow: 10px 10px 0 0 red, -10px -10px 0 0 blue; /* 1º valor = altera o eixo 'x'; 2º valor = altera o eixo 'y'; 3º valor = altera o esfumaçamento; 4º valor = altera o tamanho da sombra | valores negativos '-' a sombra fica na parte superior do elemento, já valores positivos '+' a sombra fica na parte inferior */
+            }
+            
+            div{
+                width: 100px;
+                height: 100px;
+                background-color: orange;
+                /* transition */
+                transition-property: width, height; /* "transition-property" = função que informa em qual propriedade vai ser animada */
+                transition-duration: .5s; 
+                transition-timing-function: ease-in-out; /* "transition-timing-function" função que altera a velocidade: acelera, desacelera, acelera e desacelera */
+                transition-delay: 1s; /* "transition-delay" = função que atrasa o início da animação */
+            }
+
+            div:hover{
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>CSS Efects</h1>
+        <div id="radius"></div>
+        <div>1</div>
+    </body>
+</html>
