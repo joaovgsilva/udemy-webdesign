@@ -22,7 +22,7 @@ p{
 h1, h2, h3, h4, h5, h6{
     color: #787878;
     font-weight: normal;
-    margin: 0 0 1em;
+    margin: 1em 0;
 }
 
 h1{
@@ -73,6 +73,40 @@ pre code{
     display: block;
 }
 
+ul, ol{
+    margin: 0;
+    padding-left: 1.1em;
+}
+
+li{
+    padding-left: .5em;
+}
+
+.ul-alternate{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ul-alternate li{
+    border-bottom: 2px solid #ccc;
+    padding-left: 0;
+}
+
+.ul-alternate li:last-child{ /* ":last-child" = altera apenas o último elemente da TAG selecionada */
+    border: 0;
+}
+
+.ul-icons{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ul-icons li{
+    display: inline-block;
+    font-size: 2em;
+    color: #49bf9d;
+}
+
 .main-header{
     position: fixed; /* "position: fixed" = deixa determitado elemento fixo na tela */
     top: 0; /* sempre usar na sequência o "top: 0" e "left: 0", caso o conteúdo tiver que ficar fixo na direita, se for do lado esquerdo, usar o "right: 0" */
@@ -112,4 +146,38 @@ pre code{
     margin-left: 35%;
     padding: 124px 54px 72px;
     box-sizing: border-box;
+}
+
+.row{
+    overflow: auto;
+}
+
+.half-column{ 
+    width: 50%;
+    float: left;
+}
+
+.button-default{
+    background-color: #49bf9d;
+    border: 2px solid #49bf9d;
+    color: white;
+    padding: .7em 1.5em;
+    border-radius: 5px;
+    font-size: .9em;
+    display: inline-block;
+}
+
+.button-default-stroke{
+    background-color: white;
+    border-color: #efefef;
+    color: inherit;
+}
+
+.button-default-small{
+    font-size: .8em;
+}
+
+.button-default-full{
+    display: block;
+    text-align: center;
 }
