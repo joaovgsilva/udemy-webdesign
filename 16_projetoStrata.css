@@ -19,6 +19,10 @@ p{
     margin: 0 0 2em;
 }
 
+img{
+    max-width: 100%;
+}
+
 h1, h2, h3, h4, h5, h6{
     color: #787878;
     font-weight: normal;
@@ -71,6 +75,33 @@ code{
 
 pre code{
     display: block;
+}
+
+input, label, textarea, select{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input, textarea, select{
+    background: #e9e9e9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    margin-bottom: 15px;
+}
+
+input:focus, textarea:focus{
+    border: 2px solid #49bf9d;
+    outline: none;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    width: auto;
+}
+
+textarea{
+    height: 10em;
 }
 
 ul, ol{
@@ -153,8 +184,30 @@ li{
 }
 
 .half-column{ 
-    width: 50%;
+    width: 48.5%;
     float: left;
+}
+
+.half-column:first-child{ /* ":first-child" = primeiro filho do elemento */
+     margin-right: 1.5%;
+}
+
+.half-column:last-child{ /* ":first-child" = o último filho do elemento */
+     margin-left: 1.5%;
+}
+
+.column2-3{
+    width: 65%;
+    float: left;
+}
+
+.column1-3{
+    width: 32%;
+    float: left;
+}
+
+.column1-3:nth-child(3n - 1){ /* ":nth-child(3n)" = altera todos os elementos que for multiplo de três */
+    margin: 0 2%;
 }
 
 .button-default{
@@ -165,6 +218,7 @@ li{
     border-radius: 5px;
     font-size: .9em;
     display: inline-block;
+    width: auto;
 }
 
 .button-default-stroke{
@@ -177,7 +231,35 @@ li{
     font-size: .8em;
 }
 
+.button-default-big{
+    font-size: 1em;
+}
+
 .button-default-full{
     display: block;
     text-align: center;
+}
+
+.image-link{
+    border: 0;
+}
+
+.recent-work-card img{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.main-header-link img{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.gallery-img img{
+    width: 100%;
+}
+
+.gallery-thumb img, .gallery-img img{
+    display: inline-block;
+    margin-bottom: 2%;
+    border-radius: 5px;
 }
