@@ -197,7 +197,7 @@ li{
 }
 
 .column2-3{
-    width: 65%;
+    width: 64%;
     float: left;
 }
 
@@ -206,8 +206,16 @@ li{
     float: left;
 }
 
-.column1-3:nth-child(3n - 1){ /* ":nth-child(3n)" = altera todos os elementos que for multiplo de três */
-    margin: 0 2%;
+.column1-3:nth-child(3n - 2){ /* ":nth-child(3n)" = altera todos os elementos que for multiplo de três */
+    margin-right: 2%;
+}
+
+.column1-3:nth-child(3n){ /* ":nth-child(3n)" = altera todos os elementos que for multiplo de três */
+    margin-left: 2%;
+}
+
+.column2-3 + .column1-3, .column1-3 + .column2-3{
+    margin-left: 2%;
 }
 
 .button-default{
@@ -219,12 +227,28 @@ li{
     font-size: .9em;
     display: inline-block;
     width: auto;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.button-default:hover{
+    background-color: #18b387;
+    border-color: transparent;
 }
 
 .button-default-stroke{
     background-color: white;
     border-color: #efefef;
     color: inherit;
+}
+
+.button-default-stroke:hover{
+    background-color: white;
+}
+
+.button-default-stroke:hover{
+    color: #49bf9d;
+    border-color: #49bf9d;
 }
 
 .button-default-small{
@@ -262,4 +286,24 @@ li{
     display: inline-block;
     margin-bottom: 2%;
     border-radius: 5px;
+}
+
+.main-footer{
+    position: fixed;
+    bottom: 0;
+    width: 35%;
+    left: 0;
+    padding: 0px 54px 72px 0;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.icon-link{
+    color: #787878;
+    border: transparent;
+}
+
+.icon-link:hover{
+    color: #49bf9d;
+    transition: all .5s;
 }
