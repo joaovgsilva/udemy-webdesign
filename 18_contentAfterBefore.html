@@ -1,0 +1,53 @@
+<!-- incluindo conteúdo dinamicamente utilizando CSS usando duas pseudo-classes:
+1. ":before" = conteúdo inicial 
+2. ":after" = conteúdo final 
+
+IMPORTANTE: sempre que usar :before ou :after, na sequência usar "content: "";", exemplo: 
+div:before{
+    content:"";
+} -->
+
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+
+        <style>
+            div{
+                border: 3px solid red;
+                padding: 25px;
+            }
+
+            div:before{
+                content: "texto before"; /* texto ":before" ou ":after" não é selecionável, pois não é lido pelo motores de busca */
+                background: #ccc;
+            }
+
+            div:after{
+                content: "texto after"; /* texto ":before" ou ":after" não é selecionável, pois não é lido pelo motores de busca */
+                background: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <div> texto principal da div </div>
+        <article>
+            <p>paragráfo antes do título</p>
+            <h3>Título</h3>
+            <p>paragráfo <a href="#">apenas um link com <b>negrito</b></a></p>
+            <p>paragráfo <a href="#">apenas um link com <b>negrito</b></a></p>
+            <p>paragráfo <a href="#">apenas um link com <b>negrito</b></a></p>
+        </article>
+        <hr>
+        <ul>
+            <li><a href="#">link a falso</a></li>
+            <li><a href="https://www.linkedin.com/in/joaovgsilva/" target="_blank">link externo</a></li> <!-- target="_blank" = abre a página em uma nova aba -->
+            <li><a href="09_projetoFashion.html" target="_blank" title="veja o projeto anterior">link interno</a></li> 
+            <li><a href="10_projetoFashion.css" target="_blank">link interno</a></li> 
+        </ul>
+    </body>
+</html>
