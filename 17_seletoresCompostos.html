@@ -17,7 +17,7 @@ ESTRUTURA HTML:
 
 SELETORES COMPOSTOS: 
 
-1. DESCENDÊNCIA: espaço entre um elemento e outro | sempre trabalha o elemento "pai" com o elemento "filho" ou "neto", exemplos: 
+1. DESCENDÊNCIA: espaço entre um elemento e outro | sempre trabalha o elemento "pai" com o elemento "filho", exemplos: 
 
 article a { 
     background: red;
@@ -97,3 +97,93 @@ img:not([alt]){
 }
 = está selecionando toda "img" que NÃO tem um atributo "[alt]"
 -->
+
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        
+        <style>
+            article:nth-child(1) a{ /* "nth-child()" = seleciona determinado "filho" */
+                color: red;
+            }
+
+            article:nth-child(3) > p{  /* nesse exemplo, o "nth-child" é 3 pois é o terceiro "filho", pois o "<hr>" é o segundo "filho" */
+                color: red;
+            }
+
+            article:nth-child(5) h3 + p{
+                color: red;
+            }
+
+            article:nth-child(7) h3 ~ p{
+                color: red;
+            }
+
+            article:not(.destaque){
+                color: yellowgreen;
+            }
+
+            .destaque{
+                background-color: orange;
+            }
+
+            a[href="#"]{
+                opacity: .2;
+            }
+
+            a[href^="http"]{
+                color: red;
+            }
+
+            a[title]{
+                color: green;
+            }
+
+            a[href$=".css"]{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <h3>Título</h3>
+            <p>paragráfo <a href="#">apenas um link com <b>negrito</b></a></p>
+            <p>paragráfo <a href="#">apenas um link com <b>negrito</b></a></p>
+            <p>paragráfo <a href="#">apenas um link com <b>negrito</b></a></p>
+        </article>
+        <hr>
+        <article>
+            <h3>Título</h3>
+            <p>paragráfo <a href="#">apenas um link com <b>negrito</b></a></p>
+            <p>paragráfo <a href="#">apenas um link com <b>negrito</b></a></p>
+            <p>paragráfo <a href="#">apenas um link com <b>negrito</b></a></p>
+        </article>
+        <hr>
+        <article class="destaque">
+            <h3>Título</h3>
+            <p>paragráfo <a href="#">apenas um link com <b>negrito</b></a></p>
+            <p>paragráfo <a href="#">apenas um link com <b>negrito</b></a></p>
+            <p>paragráfo <a href="#">apenas um link com <b>negrito</b></a></p>
+        </article>
+        <hr>
+        <article>
+            <p>paragráfo antes do título</p>
+            <h3>Título</h3>
+            <p>paragráfo <a href="#">apenas um link com <b>negrito</b></a></p>
+            <p>paragráfo <a href="#">apenas um link com <b>negrito</b></a></p>
+            <p>paragráfo <a href="#">apenas um link com <b>negrito</b></a></p>
+        </article>
+        <hr>
+        <ul>
+            <li><a href="#">link a falso</a></li>
+            <li><a href="https://www.linkedin.com/in/joaovgsilva/" target="_blank">link externo</a></li> <!-- target="_blank" = abre a página em uma nova aba -->
+            <li><a href="09_projetoFashion.html" target="_blank" title="veja o projeto anterior">link interno</a></li> 
+            <li><a href="10_projetoFashion.css" target="_blank">link interno</a></li> 
+        </ul>
+    </body>
+</html>
