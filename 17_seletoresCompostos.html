@@ -1,0 +1,99 @@
+<!--  
+ESTRUTURA HTML:
+<article>
+    <h3> </h3>
+    <p>
+        <a><b> </b></a>
+    </p>
+    <p>                           
+        <a><b> </b></a>
+    </p>
+    <p>
+        <a><b> </b></a>
+    </p>
+</article>
+
+= <article> (elemento "pai") rebece <h3> e recebe <p> (elementos "filho"), <p> recebe <a> (elemento "filho" de <p>), <a> recebe <b> (elemento "filho" de <a>)
+
+SELETORES COMPOSTOS: 
+
+1. DESCENDÊNCIA: espaço entre um elemento e outro | sempre trabalha o elemento "pai" com o elemento "filho" ou "neto", exemplos: 
+
+article a { 
+    background: red;
+}
+
+article p b {
+    background: red;
+}
+
+2. FILHO DIRETO: função aplicada com ">", exemplo:
+
+article p > a{
+    background: red;
+}
+
+3. IRMÃO ADJACENTE: seleciona o próximo "irmão" imediato; função aplicada com "+", exemplo:
+
+article h3 + p{
+    background: red;
+}
+
+4. PRÓXIMOS IRMÃOS: seleciona todos os elementos "irmão" que vem após o elemento selecionado; função aplicada com "~", exemplo:
+
+article h3 ~ p{
+    backgroud: red;
+}
+
+SELETORES DE ATRIBUTOS: 
+
+1. [atributo]:
+
+<article>
+    <a> sem title </a>
+    <a title=""> com title </a>
+</article>
+
+a[title]{            
+    color: red;
+}
+
+2. [atributo^="valor"]: pega somente o atributo que INICIA com.. , exemplo:
+
+<article>
+    <a href="..."> link interno </a>
+    <a href="http://"> link externo </a>
+</article>
+
+a[href^="http"]{
+    color: red;
+}
+
+3. [atributo$="valor"]: pega somente o atributo que TERMINA com.. , exemplo:
+
+<article>
+    <img src="nomeImagem.jpg"> 
+    <img src="nomeImagem.png"> 
+</article>
+
+img[src$=".png"]{
+    border-color: red;
+}
+
+4. :not(): seleciona todo elemente que NÃO é/faz tal coisa, exemplos: 
+
+:not(a){ 
+    ...;
+}
+= está selecionando todo elemento que NÃO tem a tag "a" (link)
+
+p:not(.destaque){
+    ...;
+}
+= está selecionando todo "p" que NÃO tem a class ".destaque"
+
+img:not([alt]){
+    display: none; 
+}
+= está selecionando toda "img" que NÃO tem um atributo "[alt]"
+-->
