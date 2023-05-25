@@ -1,0 +1,91 @@
+<!-- 
+1. pseudo-classes = começa com apenas um ponto, exemplo: ":pseudo-classes" ;
+2. pseudo-elementos = começa com dois pontos, exemplo: "::pseudo-elementos"  ;
+-->
+
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+
+        <style>
+            body{
+                text-align: center;
+            }
+
+            input[type="checkbox"]{
+                width: 50px;
+                height: 50px;
+            }
+
+            input[type="checkbox"]:checked{
+                width: 25px;
+                height: 25px;
+            }
+
+            button{
+                background-color: green;
+                width: 100px;
+                height: 75px;
+                border: none;
+                border-radius: 10px;
+                font-weight: bold;
+                font-size: 15px;
+                cursor: pointer;
+            }
+
+            button:disabled{
+                background-color: red;
+            }
+
+            p{
+                color: blue;
+            }
+
+            p::first-letter{
+                float: left;
+                font-size: 3em;
+                line-height: 1;
+                display: inline-block;
+                margin right: .1em;
+            }
+
+            p::first-line{
+                color: red;
+            }
+
+            p::selection{
+                background: yellow;
+            }
+
+            p:empty:before{ /* :empyt = vazio */
+                content: "paragráfo feito através do BEFORE";
+            } 
+
+            input[type="text"]:focus{
+                background: orange;
+            }
+
+            input::placeholder{
+                color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <label><input type="checkbox"></label>
+        <br><br>
+        <button>on</button>
+        <button disabled>off</button>
+        <br>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem aliquid, consequuntur architecto odit voluptatum saepe maiores atque pariatur at similique enim repudiandae alias in consequatur adipisci, accusamus, tenetur blanditiis optio.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem aliquid, consequuntur architecto odit voluptatum saepe maiores atque pariatur at similique enim repudiandae alias in consequatur adipisci, accusamus, tenetur blanditiis optio.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem aliquid, consequuntur architecto odit voluptatum saepe maiores atque pariatur at similique enim repudiandae alias in consequatur adipisci, accusamus, tenetur blanditiis optio.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem aliquid, consequuntur architecto odit voluptatum saepe maiores atque pariatur at similique enim repudiandae alias in consequatur adipisci, accusamus, tenetur blanditiis optio.</p>
+        <p> </p>
+        <p></p>
+        <br>
+        <input type="text" value="texto VALUE">
+        <input type="e-mail" placeholder="texto PLACEHOLDER">
+    </body>
+</html>
