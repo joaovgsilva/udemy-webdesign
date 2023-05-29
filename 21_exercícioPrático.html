@@ -1,0 +1,81 @@
+<!doctype html>
+<!-- doctype = informa ao browser a versão HTML que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+
+        <style>
+            html, body{
+                font-family: sans-serif;
+            }
+
+            a[target="_blank"]:after{
+                content: url(Documentos/exercício-pratíco-aula-30/167113.png);
+                display: inline-block;
+                margin-left: 5px;
+            }
+
+            a[href$='.pdf']:before{
+                content: url(Documentos/exercício-pratíco-aula-30/29099.png);
+            }
+
+            .check{
+                display: inline-block;
+                border-radius: 5px;
+                border: 2px solid #bbb;
+                background: #ddd;
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+            }
+
+            label{
+                height: 15px;
+                display: inline-block;
+            }
+
+            input[type="checkbox"]{
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+                visibility: hidden;
+                display: inline-block;
+                margin: 0;
+            }
+
+            input[type="checkbox"]:checked + label .check{
+                background: #555;
+                position: relative;
+            }
+
+            input[type="checkbox"]:checked + label .check:before{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0px;
+                bottom: 4px;
+                left: 4px;
+                right: 4px;
+                border: 2px solid white;
+                transform: rotate(45deg); /* = deg = grau */ 
+                border-top-color: transparent;
+                border-left-color: transparent;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Estrutura Básica</h1>
+
+        <a href="https://github.com/joaovgsilva" target="_blank">link GitHub</a>
+        <br>
+        <a href="linkFalso.pdf">download do PDF</a>
+        <hr>
+        <input type="checkbox" name="textoFalso" id="check"> 
+        <label for="check"><span class="check"></span>Li e aceito o contrato</label>
+    </body>
+</html>
