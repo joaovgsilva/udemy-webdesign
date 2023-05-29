@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- doctype = informa ao browser a versão HTML que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+
+        <style>
+            html, body{
+                margin: 0;
+                padding: 0;
+            }
+
+            .div1{
+                width: 150px;
+                height: 150px;
+                background: red;
+                transform: translate(50%, 50%);
+            }
+
+             /* transform = se baseia no próprio elemente | position = se baseia no elemente "pai" */ 
+
+            .div2{
+                width: 150px;
+                height: 150px;
+                background: blue;
+                position: relative;
+                top: 75px;
+                left: 75px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1">div1</div>
+        <br>
+        <div class="div2">div2</div>
+    </body>
+</html>
