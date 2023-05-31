@@ -1,0 +1,11 @@
+body{
+    font-family: serif;
+    color: orangered;
+    font-size: 16px;
+}
+
+a:after{
+    content:"( "attr(href)" )"; /* "attr(href)" = "attr" mostra o link por escrito que está dentro do atributo "(href)" */
+    display: inline-block;
+    margin: 0 10px;
+}
