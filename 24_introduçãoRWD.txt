@@ -1,0 +1,24 @@
+RESPONSIVE WEB DESIGNER (RWD):
+
+1. GRID FLUÍDA;
+2. RECURSOS FLEXÍVEIS;
+3. CONSULTAS DE MÍDIAS; 
+
+
+MEDIA QUERIES (SINTAXE): 
+
+@media screen and (max-width: 480px){
+	body {
+		background: orange;
+	}
+}
+
+
+ATENÇÃO: não esquecer de utilizar a meta tag <viewport> ( = equaliza o tamanho da resolução em pixel do aparelho e o tamanho físico do aparelho): 
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> título da página </title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
