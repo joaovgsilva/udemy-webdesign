@@ -1,0 +1,51 @@
+<!doctype html>
+<!-- doctype = informa ao browser a versão HTML que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+
+        <style>
+            html{
+                font-size: 32px;
+            }
+
+            body{
+                font-family: sans-serif;
+                font-size: 16px;
+            }
+
+            h1{
+                text-align: center;
+            }
+
+            div{
+                border: 1px solid black;
+                padding: 1em; /* "em" = relativo ao tamanho da fonte */
+                width: 20em; /* = 320px / 16px (1em) */
+                margin: auto;
+                font-size: 1em; /* aplicando "em" no "font-size" de qualquer elemento = relativo ao tamanho da fonte do elemente "pai", ou seja, elemento "body" */
+            }
+
+            p{
+                margin: 0;
+                line-height: 1.5;
+                font-size: 1.25em; /* = 16px (1em) * 1.25 = 20px */
+            }
+
+            a{
+                font-size: 1rem; /* = relativo ao tamanho da fonte principal, ou seja, TAG "html" */ 
+            }
+        </style>
+    </head>
+    <body>
+        <h1>unidades de medidas</h1>
+        <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#">Modi tempora fugiat sint quaerat quo</a>, debitis in explicabo doloribus laboriosam quos repudiandae animi velit libero, illo consequuntur sapiente? Magnam, nesciunt id!</p>
+        </div>
+    </body>
+</html>
