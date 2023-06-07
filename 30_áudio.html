@@ -1,0 +1,20 @@
+<!doctype html>
+<!-- doctype = informa ao browser a versão HTML que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+    </head>
+    <body>
+        <h1>Áudio</h1>
+        <audio src="Documentos/media/mozart_trompa.mp3" controls></audio> <!-- SINTAXE para inserir um áudio dentro do arquivo HTML -->
+        <audio controls>
+            <source src="Documentos/media/mozart_trompa.ogg" type="audio/ogg">
+            <source src="Documentos/media/mozart_trompa.mp3" type="audio/mp3">
+        </audio> <!-- método utilizado para colocar mais um de "src" dentro da TAG "audio" e fazer o browser escolher qual arquivo é o melhor -->
+        <p>seu browser não suporta tag áudio</p> <!-- paragráfo só aparece por usuário caso o browser não tiver suporte pra tag -->
+    </body>
+</html>
