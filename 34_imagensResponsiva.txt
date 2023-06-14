@@ -1,0 +1,68 @@
+atributo "srcset":
+
+<img
+
+src="http://lorempixel.com/400/200" = caso o browser não conseguir fazer a leitura do "srcset", ele utiliza a tag "src" 
+
+srcset="http://lorempixel.com/600/300/ 600w" = o "600w" indica ao browser que a imagem tem a largura de 600px 
+
+alt="texto alternativo"> 
+
+
+/
+
+
+atributo "scrset" e "sizes":
+
+<img
+
+src="http://lorempixel.com/400/200" = caso o browser não conseguir fazer a leitura do "srcset", ele utiliza a tag "src" 
+
+srcset="http://lorempixel.com/600/300/ 600w" = o "600w" indica ao browser que a imagem tem a largura de 600px 
+
+alt="texto alternativo" 
+
+sizes="33.33vw"> = indica que a imagem será renderizada em um determinado tamanho da largura da viweport ("vw" = viewport width)
+
+
+/
+
+
+e se aplicarmos media queries?
+
+<img
+
+src="http://lorempixel.com/400/200" = caso o browser não conseguir fazer a leitura do "srcset", ele utiliza a tag "src" 
+
+srcset="http://lorempixel.com/600/300/ 600w" = o "600w" indica ao browser que a imagem tem a largura de 600px 
+
+alt="texto alternativo"> 
+
+sizes="(min-width: 480px) 33.33vw, 100vw">
+
+
+/
+
+
+tag "<picture>" = container para vários arquivos de imagem com ligação da tag "<source>" na sequência:
+
+<picture>
+    <source media="(min-width: 480px)" sizes="33vw"
+        srcset="images/large.jph 1280w, images/medium.jpg 960w, images/small.jpg 480w" />
+    <source sizes="100vw" srcset="images/large_foco.jpg 822w, images/medium_foco.jpg 640w, images/small_foco.jpg 320w" />
+    <img src="images/medium.jpg" alt="fallback para browsers velhos" />
+</picture>
+
+obs: tag <picture> é utilizada quando temos diferentes imagens sendo monstrada dependendo do contexto 
+
+
+/
+
+
+atributo "type":
+
+<picture>
+    <source scrset="imagem.svg" type="image/svg+xml">
+    <source srcset="imagem.webp" type="image/webp">
+    <img src=imagem.png" alt="caso o browser não tiver suporte para os estilos de imagem acima, utilizar a tag <img> com a imagem tipo .png">
+<picture>
