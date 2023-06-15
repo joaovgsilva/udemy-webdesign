@@ -27,12 +27,60 @@
             #grupo-cores div:before{
                 content: '['counter(contador)']';
             }
+
+            #grupo-cores div:nth-child(2){
+                background-color: blueviolet;
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-child(3){
+                background-color: rgb(50%, 50%, 0%);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-child(4){
+                background-color: rgba(50%, 50%, 0%, .5);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-child(5){
+                background-color: hsl(30deg, 100%, 50%);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-child(6){
+                background-color: hsla(30deg, 100%, 50%, .5);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-child(7){
+                background-image: linear-gradient(68deg, blue, transparent), linear-gradient(to top, red, transparent);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-child(8){
+                background-image: radial-gradient(red, blue);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-child(9){
+                background-image: radial-gradient(circle, blue, yellow, green);
+                background-clip: padding-box;
+            }
+
+            #grupo-cores div:nth-child(10){
+                background-image: radial-gradient(ellipse, orange, rgba(50, 10, 200, .3), orange);
+                background-clip: padding-box;
+            }
         </style>
     </head>
     <body>
         <h1>Backgrounds, cores e gradients</h1>
         <h2>Names, hexadecimais, RGB, RGBa, HSL, HSLa</h2>
         <div id="grupo-cores">
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus ipsam eum quibusdam laudantium iste repellendus iure optio modi minus, corrupti fugiat nemo nostrum, soluta mollitia minima, facere cumque non omnis.</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus ipsam eum quibusdam laudantium iste repellendus iure optio modi minus, corrupti fugiat nemo nostrum, soluta mollitia minima, facere cumque non omnis.</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus ipsam eum quibusdam laudantium iste repellendus iure optio modi minus, corrupti fugiat nemo nostrum, soluta mollitia minima, facere cumque non omnis.</p></div>
             <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus ipsam eum quibusdam laudantium iste repellendus iure optio modi minus, corrupti fugiat nemo nostrum, soluta mollitia minima, facere cumque non omnis.</p></div>
             <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus ipsam eum quibusdam laudantium iste repellendus iure optio modi minus, corrupti fugiat nemo nostrum, soluta mollitia minima, facere cumque non omnis.</p></div>
             <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus ipsam eum quibusdam laudantium iste repellendus iure optio modi minus, corrupti fugiat nemo nostrum, soluta mollitia minima, facere cumque non omnis.</p></div>
