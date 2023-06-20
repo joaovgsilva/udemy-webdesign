@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+
+        <style>
+            .flexbox{ /* elemento que recebe o "display: flex;" = elemento "flex-container" */
+                height: 250px;
+                border: 2px solid blue;
+                margin-bottom: 15px;
+                display: flex;
+            }
+
+            .flexbox div{ /* elemento filho de quem recebeu o "display: flex;" = elemento "display-itens" */
+                background: blueviolet;
+                width: 300px;
+                margin: 15px;
+            }
+
+            .flexbox:nth-child(4){
+                /* flex-direction: row;
+                flex-wrap: wrap; "flex-wrap: wrap" = efeito quebra linha caso o elemento não couber mais na tela */ 
+                flex-flow: row nowrap; /* "flex-flow: row wrap" = atalho para "flex-direction" e "flex-wrap" */
+            }
+
+            .flexbox:nth-child(5){
+                justify-content: space-between; /* "justify-content" = modifica os itens na horizontal */
+            }
+
+            .flexbox:nth-child(5) div{
+                width: 20px;
+            }
+
+            .flexbox:nth-child(6){ 
+                align-items: center; /* "align-items" = modifica os itens na vertical */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Display Flex</h1>
+        <p>Acomodar ou distribuir elementos de modo fácil</p>
+        <p>Ajudar a centralizar na vertical</p>
+        <div class="flexbox"> 
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        <div class="flexbox"> 
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        <div class="flexbox"> 
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+    </body>
+</html>
