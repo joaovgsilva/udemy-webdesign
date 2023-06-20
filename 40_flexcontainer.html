@@ -39,6 +39,16 @@
             .flexbox:nth-child(6){ 
                 align-items: center; /* "align-items" = modifica os itens na vertical */
             }
+
+            .flexbox:nth-child(7){
+                align-items: baseline;
+            }
+
+            .flexbox:nth-child(8){
+                justify-content: center;
+                flex-wrap: wrap;
+                align-content: center; /* "align-content" = só é aplicado quando o elemento tem mais de uma linha */
+            }
         </style>
     </head>
     <body>
@@ -54,6 +64,18 @@
         <div class="flexbox"> 
             <div class="div1">1</div>
             <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        <div class="flexbox"> 
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        <div class="flexbox"> 
+            <div class="div1">1</div>
+            <div class="div2" style="font-size: 4em">2</div>
             <div class="div3">3</div>
             <div class="div4">4</div>
         </div>
