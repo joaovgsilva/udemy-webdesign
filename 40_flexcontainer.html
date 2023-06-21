@@ -49,6 +49,53 @@
                 flex-wrap: wrap;
                 align-content: center; /* "align-content" = só é aplicado quando o elemento tem mais de uma linha */
             }
+
+            /* propriedades aplicadas ao flexitens */
+
+            .flexbox:nth-child(9){
+                justify-content: center;
+                align-items: center;
+            }
+
+            .flexbox:nth-child(9) div{
+                background: blue;
+                flex-basis: 50px; /* "flex-basis" = está relaciona com a largura do elemento */
+                height: 50px;
+            }
+
+            .flexbox:nth-child(10){
+                justify-content: center;
+                align-items: center;
+            }
+
+            .flexbox:nth-child(10) div{
+                background: blue;
+                flex-basis: 50px; /* "flex-basis" = está relaciona com a largura do elemento */
+                height: 50px;
+            }
+
+            .flexbox:nth-child(10) div:nth-child(2){
+                flex-grow: 1; /* "flex-grow" = preenche todo o espaço vazio do elemento */
+            }
+
+            .flexbox:nth-child(10) div:nth-child(4){
+                flex-grow: 1;
+            }
+
+            .flexbox:nth-child(11) div{
+                background: blue;
+                flex-basis: 150px;
+                height: 50px;
+            }
+
+            .flexbox:nth-child(11) div:nth-child(2){
+                flex-shrink: 2; /* "flex-shrink" =  faltou espaço para todos os elementos? o "flex-shrink" diminui um elemento para que o outro se ajustar */
+            }
+
+            .flexbox:nth-child(11) div:nth-child(4){
+                flex: 1 0 50px; /* "flex" = atalho para grow, shrink e basis */
+            }
+
         </style>
     </head>
     <body>
@@ -84,6 +131,26 @@
             <div class="div2">2</div>
             <div class="div3">3</div>
             <div class="div4">4</div>
+        </div>
+        <div class="flexbox"> 
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+        </div>
+        <div class="flexbox"> 
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+            <div class="div5">5</div>
+        </div>
+        <div class="flexbox"> 
+            <div class="div1">1</div>
+            <div class="div2">2</div>
+            <div class="div3">3</div>
+            <div class="div4">4</div>
+            <div class="div5">5</div>
         </div>
     </body>
 </html>
