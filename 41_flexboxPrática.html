@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+
+        <style>
+            .cardContainer{
+                display: flex;
+            }
+
+            .cardFlex{
+                border: 1px solid black;
+                width: 30%;
+                padding: 10px;
+                margin: 1%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .cardFlex p{
+                flex-grow: 1;
+            }
+
+            .cardFlex button{
+                align-self: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Display Flex</h2>
+        <p>Acomodar ou distribuir elementos de modo fácil</p>
+        <p>Ajuda a centralizar na vertical</p>
+        <section class="cardContainer">
+            <article class="cardFlex">
+                <h2>Título</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, exercitationem?</p>
+                <button>Vai</button>
+            </article>
+            <article class="cardFlex">
+                <h2>Título</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <button>Vai</button>
+            </article>
+            <article class="cardFlex">
+                <h2>Título</h2>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <button>Vai</button>
+            </article>
+        </section>
+    </body>
+</html>
