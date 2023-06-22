@@ -1,0 +1,19 @@
+1. Diferença entre Flexbox x Grid Layout:
+1.1. Flexbox = foi criado para conseguirmos organizar elementos em linhas reta, seja ela horizontal (flex-direction: row) ou vertical (flex-direction: column);
+1.1.1. display: flex
+    - justify-content 
+    - align-itens
+    - align-content
+    - flex-grow
+    - flex-shrink
+    - order
+1.2. Grid Layout = foi criado para conseguirmos organizar elementos de uma forma mais complexa;
+1.3. ATENÇÃO: um NÃO elimina o outro, eles se COMPLEMENTAM; 
+
+2. CSS Grid ou Grid Layout:
+2.1. sempre trabalhamos com linhas e colunas, ou seja, eixo x e eixo y;
+2.2. quando é estabeleciodo uma Grid de 3 linhas e 5 colunas, temos alguns nomes importante para lembrar:
+2.2.1. Grid line = é o nome da linha imaginaria que separa as colunas;
+2.2.2. Grid cell = é o conteúdo que está dentro das linhas imaginarias; 
+2.2.3. Grid track = é quando tem 2 ou mais conteúdo no mesmo sentido, sendo ele no eixo x ou no eixo y;
+2.2.4. Grid area = é quando tem 2 ou mais conteúdo no sentido do eixo x e do eixo y. 
