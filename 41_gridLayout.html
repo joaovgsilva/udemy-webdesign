@@ -32,14 +32,27 @@
             /* GRID */
             .gridContainer{
                 display: grid;
-                grid-template-columns: 90px 90px 90px;
-            /*  grid-template-rows: 100px 100px;
-                    ou podemos usar da seguinte maneira: */
-                grid-template-rows: repeat(2, 100px);
-            /*  grid-row-gap: 50px; 
+
+                grid-template-rows: 100px 100px;
+                grid-template-columns: repeat(3, 1fr); /* unidade de medida "fr" = pega todo espaço que excede e distribuí entre os elementos de uma forma uniforme  
+
+                grid-row-gap: 50px; 
                 grid-column-gap: 10px; 
-            /*  "grid-row-gap", "grid-column-gap" e/ou "grid-gap" = espaço entre os elementos */
-                grid-gap: 50px 10px; /* grid-gap: valor.linha valor.coluna; */
+                ou */
+                grid-gap: 30px 10px; /* grid-gap: valor.linha valor.coluna; | "grid-row-gap", "grid-column-gap" e/ou "grid-gap" = espaço entre os elementos */
+            }
+
+            .gridItem:nth-child(1){
+                background: orange;
+
+                /* posicionando gridItens:
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-column-start: 3;
+                grid-column-end: 4; 
+                ou */
+                grid-row: 1 / 2;
+                grid-column: 3 / 4;
             }
         </style>
     </head>
