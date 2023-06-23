@@ -32,10 +32,14 @@
             /* GRID */
             .gridContainer{
                 display: grid;
-                grid-template-columns: 100px 100px 100px;
-                grid-template-rows: 100px 100px;
-                /* ou podemos usar da seguinte maneira: 
-                grid-template-columns: repeat(3, 100px); */
+                grid-template-columns: 90px 90px 90px;
+            /*  grid-template-rows: 100px 100px;
+                    ou podemos usar da seguinte maneira: */
+                grid-template-rows: repeat(2, 100px);
+            /*  grid-row-gap: 50px; 
+                grid-column-gap: 10px; 
+            /*  "grid-row-gap", "grid-column-gap" e/ou "grid-gap" = espaço entre os elementos */
+                grid-gap: 50px 10px; /* grid-gap: valor.linha valor.coluna; */
             }
         </style>
     </head>
