@@ -1,0 +1,87 @@
+transition: 
+1. propriedade transition:
+   transition-property
+   transition-duration
+   transition-delay
+   transition-timing-function
+2. animação entre um estado e outro;
+2.1. ".elemento" e ".elemento:hover";
+3. é possível fazer múltiplas transições;
+3.1. para separar uma transição de outra, é preciso utilizar a ",";
+
+transition vs animation:
+1. transition:
+1.1. apenas para transições simples (sem keyframes);
+1.2. dependem de interação do usuário (:hover, :focus, :active) ou do js para adicionar/remover uma classe; 
+vs
+2. animation:
+2.1. transições complexas (com um ou mais keyframes);
+2.2. não dependem de interação do usuário (mas ainda podemos animar com js - adicionar/remover uma classe);
+2.3. maior controle sobre a animação criada; 
+
+animation:
+1. propriedades animation:
+   animation-name
+   animation-duration
+   animation-delay
+   animation-timing-function
+   animation-iteration-count
+   animation-direction
+   animation-fill-mode
+   animation-play-state
+
+obs:
+1. somente valores numéricos podem ser animados. ex: 10px, .5, 58%, 10em, #cf0, red. valores como auto, arial, hidden, entre outros, não são numéricos;
+2. propriedades mais performáticas para animação são: transform e opacity; 
+3. se preciso, utilize will-change para tentar melhorar a performance da animação;
+
+keyframes ou quadro-chaves:
+
+* criação de keyframes *
+
+@keyframes nomeAnimação{
+    from{
+        color: red;
+    }
+    to{
+        color: blue;
+    }
+}
+
+* o código acima é a mesma coisa que o código de baixo *
+
+@keyframes nomeAnimação{
+    0%{
+        color: red;
+    }
+    100%{
+        color:blue
+    }
+}
+
+* exemplo quando a animação tem um elemento entre "from" (= 0% do tempo) e "to" (100% do tempo) * 
+
+@keyframes nomeAnimação{
+    0%{
+        color: red;
+    }
+    50%{
+        color: orange;
+    }
+    100%{
+        color:blue
+    }
+}
+
+* utilizando o keyframe no elemento *
+
+.elemento{
+    animation: nomeAnimação 1s;
+}
+
+ou 
+
+.elemento{
+    animation-name: nomeAnimação;
+    animation-duration: 1s;
+}
