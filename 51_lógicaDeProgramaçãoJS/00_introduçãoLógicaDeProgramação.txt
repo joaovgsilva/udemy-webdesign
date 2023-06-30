@@ -1,0 +1,4 @@
+Lógica de Programação:
+
+1. é a sequência de passos a serem executados em ordem capaz de resolver um problema específico;
+1.1. essa sequência de lógica é chamada de algoritmos;
