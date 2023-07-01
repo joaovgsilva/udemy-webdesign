@@ -2,3 +2,24 @@ Lógica de Programação:
 
 1. é a sequência de passos a serem executados em ordem capaz de resolver um problema específico;
 1.1. essa sequência de lógica é chamada de algoritmos;
+
+Lógica de Programação com JS (Javascript):
+
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <script>
+
+        </script>
+    </body>
+</html>

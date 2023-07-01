@@ -1,0 +1,40 @@
+<!-- Lógica de Programação com JS (Javascript): -->
+
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1> 
+
+<!--    1. Operadores Aritméticos: 
+        1.1. são eles:
+             + = adiçao;
+             - = subtração;
+             * = multiplicação;
+             / = divisão;
+             % = módulo (= mostra o resto da divisão, exemplo: 10 % 9 = o resultado vai ser o resto da divisão, ou seja, sobra 1);
+             ** = exponenciação (= número elevado ao quadrado; número elevado ao cubo);
+             ++ = incremento (= pega o número da variável e adiciona +1);
+             -- = decremento (= pega o número da variável e subtraí -1); -->
+
+<!--    problema: pedir para o usuário digitar dois números e mostrar a média -->
+        <script>
+            var n1 = prompt('Digite um número');
+            n1 = parseFloat(n1);
+
+            var n2 = prompt('Digite outro número');
+            n2 = parseFloat(n2);
+
+            var media = (n1 + n2) / 2; // as informações que estiver dentro dos () se tornam prioridade na executação do JS 
+
+            alert('A média é: ' + media);
+        </script>
+    </body>
+</html>
