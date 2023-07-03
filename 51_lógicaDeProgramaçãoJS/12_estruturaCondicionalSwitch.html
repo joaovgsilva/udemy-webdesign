@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        <!-- estrutura condicional switch -->
+
+<!-- problema: pedir para o usuário digitar um número de 1 a 3. mostrar na tela uma mensagem diferente para cada número -->
+        <script>
+            var n = parseInt(prompt('digite um número'));
+
+            switch(n){
+                case 1: 
+                    alert('boa escolha');
+                    break;
+                case 2:
+                    alert('legal');
+                    break
+                case 3:
+                    alert('bacana');
+                    break;
+                default:
+                    alert('escolha de 1 a 3');
+            }
+        </script>
+    </body>
+</html>
