@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <script>
+            // fazer jogador 1 digitar um número
+            var nJogador1 = parseInt(prompt('número do jogador 1')); 
+
+            // fazer jogador 2 digitar outro número 
+            var nJogador2 = parseInt(prompt('número do jogador 2')); 
+
+            // se forem iguais, mostrar mensagem 'empate' e encerrar programa
+            if(nJogador1 === nJogador2){
+                alert('vocês empataram');
+            } 
+            
+            // se forem diferentes, sortear um número entre 0 e 1
+            else { 
+            var nSorteado = parseInt(Math.random() * 2); // = "Math.random()" = comando do JS para sortear número aleatório entre 0 e QUASE 1  
+
+            // se o número sorteado for 0, ganha quem escolher o número MENOR
+                if(nSorteado === 0){
+                    if(nJogador1 < nJogador2){
+                        alert('ganhou o jogador 1');
+                    } else {
+                        alert('ganhou o jogador 2');
+                    }
+                } 
+            // se o número sorteado for 1, ganha quem escolher o número MAIOR
+                else{
+                    if(nJogador1 > nJogador2){
+                        alert('ganhou o jogador 1');
+                    } else{
+                        alert('ganhou o jogador 2');
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
