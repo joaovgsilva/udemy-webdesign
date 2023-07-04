@@ -1,10 +1,3 @@
-Lógica de Programação:
-
-1. é a sequência de passos a serem executados em ordem capaz de resolver um problema específico;
-1.1. essa sequência de lógica é chamada de algoritmos;
-
-Lógica de Programação com JS (Javascript):
-
 <!doctype html>
 <html lang="pt-br">
     <head>
@@ -18,8 +11,19 @@ Lógica de Programação com JS (Javascript):
     <body>
         <h1>Lógica de programação com Javascript</h1>
 
+<!--    problema: pedir para o usuário digitar um número e mostrar a tabuada desse número de 1 a 1000 -->
         <script>
+            var numero = parseFloat(prompt('digite um número'));
 
+            var indice = 1;
+
+            while(indice <= 1000){
+                document.write(numero + ' x ' + indice + ' = ' + (numero * indice) + '<br>');
+
+                indice = indice + 1;
+            }
+
+            document.write('saiu do loop');
         </script>
     </body>
 </html>
