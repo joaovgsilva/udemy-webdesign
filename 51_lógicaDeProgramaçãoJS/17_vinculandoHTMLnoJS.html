@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <div id="output"></div>
+
+        <script>
+            var output = document.querySelector('#output'); // "document." = forma de acessar um conteúdo que está dentro do HTML
+
+            var mensagem = '';
+            for(var i = 0; i<1001; i++){
+                mensagem += 'i: ' + i + '<br>';
+            }
+
+            output.innerHTML = mensagem; 
+        </script>
+    </body>
+</html>

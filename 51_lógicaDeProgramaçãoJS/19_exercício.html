@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        <button onclick="somar()">+</button>
+        <button onclick="subtrair()">-</button>
+        <button onclick="multiplicar()">*</button>
+        <button onclick="dividir()">/</button>
+        <div id="output"></div>
+
+        <script>
+            var n1 = parseFloat(prompt('digite um número'));
+
+            escreve();
+
+            function escreve(){
+                var output = document.querySelector('#output');
+                output.innerHTML = n1;
+            }
+
+            function somar(){
+                var n = parseFloat(prompt('digite outro número'));
+                n1 = n1 + n;
+                escreve();
+            }
+
+            function subtrair(){
+                var n = parseFloat(prompt('digite outro número'));
+                n1 = n1 - n;
+                escreve();
+            }
+
+            function multiplicar(){
+                var n = parseFloat(prompt('digite outro número'));
+                n1 = n1 * n;
+                escreve();
+            }
+
+            function dividir(){
+                var n = parseFloat(prompt('digite outro número'));
+                n1 = n1 / n;
+                escreve();
+            }
+        </script>
+    </body>
+</html>
