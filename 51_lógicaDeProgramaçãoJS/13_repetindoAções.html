@@ -24,6 +24,24 @@
             }
 
             document.write('saiu do loop');
+
+            // mais tipos de loop:
+
+            do {
+                document.write(numero + ' x ' + indice + ' = ' + (numero * indice) + '<br>');
+
+                indice = indece + 1;
+            } while(indice <= 1000);
+
+            document.write('saiu do loop'); 
+
+            // loop "do" = permite que o bloco de código seja executado pelo menos uma vez, independente da primeira avaliação
+
+            for(var i = 1; i <= 1000; i++){ // "i++" = var i = var i + 1
+                document.write(numero + ' x ' + i + ' = ' + (numero * i) + ' <br> ') ;
+            }
+
+            document.write('saiu do loop'); 
         </script>
     </body>
 </html>

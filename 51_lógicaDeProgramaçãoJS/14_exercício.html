@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+<!-- problema: reescrever o código da aula anterior, mas inserindo uma linha divisória sempre que mudar a dezena. ou seja, entre o 10 e o 11, entre o 20 e o 21 e assim por diante. 
+para escrever uma linha horizontal, usar a tag <hr> -->
+        <script>
+            var numero = prompt('digite um número');
+            numero = parseFloat(numero);
+
+            var indice = 1;
+
+            while(indice <= 1000){
+                document.write(numero + " x " + indice + " = " + (numero * indice) + " <br> ");
+                
+                if(indice % 10 === 0 && indice > 0){
+                    document.write('<hr>');
+                }
+
+                indice = indice + 1;
+
+            }
+
+            document.write('saiu do loop');
+        </script>
+    </body>
+</html>

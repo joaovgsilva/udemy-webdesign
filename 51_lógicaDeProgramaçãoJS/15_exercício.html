@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+<!-- problema: mostrar na tela todos os anos a partir de 1004 até o ano de 2017, pulando em quarto em quatro anos. -->
+        <script>
+            var ano = 1004; // criado a variável inicial com o dado inicial da proposta do exercício
+
+            while(ano <= 2017){
+                document.write(ano + ' <br> ');
+                ano += 4; 
+            } // enquanto (while) variável for menor ou igual (<=) 2017, vai ser mostrado a variável (document.write(ano) a cada 4 (ano = ano + 4)
+
+        </script>
+    </body>
+</html>
