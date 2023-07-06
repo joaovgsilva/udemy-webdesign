@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <button onclick="mostrarAreaAlert()">mostrar área no alert</button>
+
+        <button onclick="mostrarAreaOutput()">mostrar área no output</button>
+
+        <div id="output"></div>
+
+<!-- problema: pedir para o usuário dois números que representam os lados de um retângulo. mostrar na tela a área titak de duas formas distintas: em um alert ou na div #output (dependendo do botão clicado). esse código não precisa ser executado quando a página é aberta -->        
+        <script>
+            function mostrarAreaAlert(){
+                var largura = parseFloat(prompt('digite a largura'));
+
+                var altura = parseFloat(prompt('digite a altura'));
+
+                var area = calcularArea(largura, altura);
+
+                alert('a área total é: ' + area);
+            }
+
+            function mostrarAreaOutput(){
+                var largura = parseFloat(prompt('digite a largura'));
+
+                var altura = parseFloat(prompt('digite a altura'));
+
+                var area = calcularArea(largura, altura);
+
+                document.querySelector('#output').innerHTML = 'a área total é: ' + area; 
+            }
+
+            function calcularArea(l, a){
+                return l * a;
+            }
+        </script>
+    </body>
+</html>
