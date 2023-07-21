@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <div id="output"></div>
+
+<!-- problema: mostrar na tela todos os produtos disponíveis para compra. os nomes dos produtos estão agrupados num array ("arrays" = conjunto de dados agrupados entre []) -->
+        <script>
+              var produtos = new Array('caneta', 'lapis', 'tesoura', 'borracha', 'caderno', 'livro');
+
+              produtos.push('cartolina', 'apostila');
+
+              var output = document.querySelector('#output');
+
+              var msg = '';
+              for (var i = 0; i < produtos.length; i++){ // "length" = propriedade que indica a quantidade de indices que tem dentro do arrays
+                msg += 'produto ' + (i + 1) + ': ' + produtos[i] + '<br>';
+              }
+
+              output.innerHTML = msg; 
+        </script>
+    </body>
+</html>

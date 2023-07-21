@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+<!-- problema: mostrar na tela a soma dos números pares da array abaixo -->
+        <script>
+            var numeros = new Array(1, 2, 3, 4, 5);
+
+            var somaDosPares = somaOsPares(numeros);
+
+            alert('a soma é: ' + somaDosPares);
+
+            function somaOsPares(numeros){
+                var soma = 0;
+
+                for(var i = 0; i < numeros.length; i++){
+                console.log(i);
+                console.log(numeros[i]);
+
+                    if(!isNaN(numeros[i]) && numeros[i] % 2 === 0){
+                    soma += numeros[i];
+                    }
+                }
+
+                return soma;
+            }
+        </script>
+    </body>
+</html>
