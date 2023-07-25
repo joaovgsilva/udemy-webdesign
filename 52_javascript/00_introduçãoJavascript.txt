@@ -1,0 +1,42 @@
+1. o que é Javascript?
+1.1. é uma linguagem que permite a criação de páginas mais dinânmicas;
+
+2. Javascript é uma implementação do ECMAScript;
+2.1. ECMAScript é a linguagem base para outras linguagens como o Javascript, o JScript e o ActionScript;
+
+3. o que é sistema léxico Javascript?
+3.1. sistema léxico é como a linguagem ela é criada;
+3.2. sistema léxico JS:
+3.2.1. case-sensitive;
+       comentários | "//" para comentar apenas uma linha e "/* */" para comentar mais de duas linhas;
+       declarações;
+       literais | = ao invés de usar:
+var obj = new Object();
+obj.nome = 'Zé';
+obj.idade = 25;
+                    na forma literal é utilizado:
+obj = {
+       nome: 'Zé',
+       idade: 25
+};
+                    sendo é possível usar em OBJETO e ARRAYS;
+       escape | = quando tivermos que utilizar "" no meio da frase, usar \ antes da primeira " e após fechar a segunda ", utilizar o \ novamente;
+var frase = "Desenvolvedor \"Frontend\" em Desenvolvimento";
+       variáveis e constantes | = var, let e const;
+       Null, undefined, NaN e Infinity;
+       objeto global (window, global) e this;
+
+4. como depurar/debugar Javascript no browser;
+4.1. objeto console;
+     debugger;
+     breakpoint; 
+
+5. orientação a objetos;
+5.1. caracter mais importante no JS: . (ponto);
+5.1.1. o carácter "." da acesso aos métodos (funções) e propriedades (variáveis) do objeto;
+5.2. protótipos | = é uma "fábrica" que vai gerar alguma coisa:
+var minhaCaneta = new Caneta();
+       // MÉTODO 
+minhaCaneta.defineCor("red");
+       // PROPRIEDADE *
+minhaCaneta.cor = "red";
