@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <div id="output"></div>
+
+<!-- problema: mostrar na tela os dados de produtos e preço. estes dados estarão agrupados em um array de objetos -->
+        <script>
+            var produtos = [ // "[]" = array
+                {'nome': 'caneta', 'preco': 2}, // "{}" = objeto
+                {'nome': 'lapis', 'preco': 1.2},
+                {'nome': 'borracha', 'preco': 0.5}
+            ];
+
+            var msg = '';
+
+            for( var i = 0; i < produtos.length; i++){
+                console.log(produtos[i]);
+
+                msg += '<h2>produto: ' + produtos[i].nome + '</h2>';
+                msg += '<p>preço: R$ ' + produtos[i].preco + '</p><br>';
+            }
+
+            document.querySelector('#output').innerHTML = msg;
+        </script>
+    </body>
+</html>

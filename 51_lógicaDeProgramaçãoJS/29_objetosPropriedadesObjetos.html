@@ -1,0 +1,46 @@
+<!-- OBJETOS = conjunto de dados agrupados entre {} -->
+
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <div id="output"></div>
+
+<!-- problema: mostrar na tela todos os dados de um produto específico, contendo quantidade em estoque e preço. estes dados estarão agrupados em um objetivo -->
+        <script>
+            var produto1 = new Object();
+            produto1.nome = 'caneta';
+        // ".nome" é uma propriedade de "produto1" | propriedade = variável (".nome") criada dentro de objeto ("produto1")
+            produto1.preco = 2.2;
+            produto1.estoque = 10;
+
+        // método = função atrelado à um objeto, por exemplo: 
+            produto1.comprar = function(qtd){
+                if(!qtd){
+                    qtd = 1;
+                } // = se (if) não receber "qtd" (!qtd), o "qtd" vai receber 1 (qtd = 1)
+                console.log('comprou ' + produto1.nome);
+            //  this.estoque--; // "--" = valor dele mesmo ("produto1.estoque") menos um
+                this.estoque = this.estoque - qtd;
+                console.log(this.estoque); // "this" = é uma referência para o próprio objeto ("produto1")
+            }
+
+            var msg = '';
+
+            msg += 'nome: ' + produto1.nome + '<br>';
+            msg += 'preço: ' + produto1.preco + '<br>';
+            msg += 'estoque: ' + produto1.estoque + '<br>';
+
+            document.querySelector('#output').innerHTML = msg;
+        </script>
+    </body>
+</html>
