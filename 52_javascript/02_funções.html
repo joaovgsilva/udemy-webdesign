@@ -47,7 +47,28 @@
 
             parametro(function(){
                 console.log('função passada por paramêtro');
-            }); // = executa uma função chamada "parametro" e através de paramêtro está passando uma outra função "console.log('função passada por paramêtro');" 
+            }); // = executa uma função chamada "parametro" e através de paramêtro está passando uma outra função "console.log('função passada por paramêtro');"
+
+            console.log('===== ===== ===== =====')
+
+            // 1.4. no ES5, são as únicas que criam escopos:
+            var x = 0;
+            var z; // variável sem valor = underfined
+
+            function mostraX(){
+                var x = 10; // quando criamos uma variável dentro do corpo uma função, ela se torna um ESCOPO LOCAL, evitando conflitos com variáveis que estiverem fora do corpo da função 
+                y = 20; // o ESCOPO GLOBAL é quando criamos uma variável sem o "var"
+                var z = 30;
+                console.log('mostra x dentro: ', x);
+                console.log('mostra y dentro: ', y);
+                console.log('mostra z dentro: ', z);
+            } 
+
+            mostraX()
+
+            console.log('mostra x fora: ', x);
+            console.log('mostra y fora: ', y);
+            console.log('mostra z fora: ', z);
         </script>
     </body>
 </html>
