@@ -13,13 +13,41 @@
 <!--    1. funções: 
         1.1. literais; 
         1.2. de primeira classe;
+        1.2.1. JS por ser uma linguagem funcional é possível tratar função como qualquer objeto; 
         1.3. podem ser passadas por parâmetros; 
         1.4. no ES5, são as únicas que criam escopos; 
         1.5. podem ser auto-executáveis (IFEE); 
         1.6. possuem uma propriedade que mostra os argumentos passados por parâmetro -->
 
         <script>
-            
+            // 1.1. literais: 
+            function somar(n1, n2){ // dar nome para função é opcional | *criando uma função* = function nomeOpcional (){} | tudo que estiver dentro de "()" é os parâmetros/argumentos da função & tudo que estiver dentro de "{}" é o corpo da função 
+                return n1 + n2;
+            }
+
+            var soma = somar(10, 20) ;
+            console.log('Resultado: ', soma); // para passar mais de um valor em "console.log" é necessário utilizar a ","
+
+            // 1.2. de primeira classe:
+            somar.teste = 'propriedade da função'; // = atribuiu uma propriedade ("teste") dentro da função "somar", que por sua vez atribui um valor ('propriedade da função')
+
+            console.log(somar.teste);
+
+            // uma função sem nome, também é chamada como função anônima, segue abaixo um exemplo:
+            var teste = function(msg){
+                console.log('função anônima, ', msg);
+            }; // quando uma função está vinculada com uma variável, é preciso encerrar a sintaxe com ";"
+
+            teste('mensagem passada através de parâmetro'); // = a variável "teste" está vinculado a uma função, então é possível usá-la como função 
+
+            // 1.3. podem ser passadas por parâmetros
+            var parametro = function(f){
+                f();
+            };
+
+            parametro(function(){
+                console.log('função passada por paramêtro');
+            }); // = executa uma função chamada "parametro" e através de paramêtro está passando uma outra função "console.log('função passada por paramêtro');" 
         </script>
     </body>
 </html>
