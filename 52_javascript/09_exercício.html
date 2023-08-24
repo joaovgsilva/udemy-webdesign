@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Javascript</h1>
+
+<!-- problema: temos duas variáveis chamadas nome e sobrenome com valores definidos. precisamos mostrar estas variáveis concatenadas num input type="text" e deixar este input desabilitado -->
+        <input type="text" id="txtNome" placeholder="Digite seu nome">
+        <script>
+            var $txt = document.getElementById('txtNome');
+            var nome = 'João';
+            var sobrenome = "Gomes";
+
+            document.getElementById('txtNome').value = nome + ' ' + sobrenome;
+            document.getElementById('txtNome').readOnly = true;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Javascript</h1>
+
+<!-- problema: repetir o exercício anterior, mas fazer com que o nome do usuário seja digitado num input (e não mais no prompt) -->
+        <input type="text" id="txtNome" placeholder="Digite seu nome">
+        <button onclick="btnNome()">Enviar</button>
+        <div id="msg"></div>
+        <script>
+            var txtNome = document.querySelector('#txtNome');
+
+            function btnNome(){
+                var nome = txtNome.value; // = sempre que estiver buscando informação/valor que está dentro do input (formulário) HTML, sempre utilizar a propriedade "value" | "value" serve para recuperar e inservir uma nova informação/valor em um campo de formulário
+                document.querySelector('#msg').innerHTML = 'Bem-vindo, <b>' + nome + '</b>';
+            }
+        </script>
+    </body>
+</html>

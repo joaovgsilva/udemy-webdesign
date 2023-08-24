@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Javascript</h1>
+
+<!-- problema: mostrar na tela (div com um #msg) uma mensagem de boas-vindas, exemplo: "Bem-vindo, João". o nome do usuário pode ser uma variável cujo valor foi digitado pelo prompt() e deve estar em NEGRITO -->
+        <div id="msg"></div>
+        <script>
+            (function(){
+                var nome = prompt('Digite seu nome:');
+                document.querySelector('#msg').innerHTML = 'Bem-vindo, <b>' + nome + '</b>'; // 'innerHTML' = serve para inserir código HTML no DOM e reflete na visualização da página
+            })();
+        </script>
+    </body>
+</html>
