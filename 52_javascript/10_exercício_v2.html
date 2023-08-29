@@ -9,7 +9,6 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-theme.css">
-        <script src="11_exercício.js"></script>
     </head>
     <!-- problema: lembra do loop e da função calcularMedia que criamos? vamos criar um loop que percora as linhas de uma tabela de algunos, encontre as quatro notas (n1, n2, n3 e n4) e mostre na última colina dessa tabela a média correspondente de cada aluno -->
     <body>
@@ -59,26 +58,32 @@
                 </table>
             </div>
         </section>
+        <script src="./11_exercício.js"></script>
         <script>
             (function(){
-                var trs = document.querySelectorAll('.js-table tdoby .aluno');
+                var trs = document.querySelectorAll('.js-table tbody .aluno');
                 var x = 0;
 
                 while(trs[x]){
                     var linhaAluno = trs[x];
-                    var n1, n2, n3, n4, media;
                     var tds  = linhaAluno.querySelectorAll('td');
-                    n1 = pegaNota(tds[1]);
-                    n2 = pegaNota(tds[2]);
-                    n3 = pegaNota(tds[3]);
-                    n4 = pegaNota(tds[4]);
-                    media = calcularMedia(n1, n2, n3, n4);
+                    var notas = recuperarNumerosDeColunas(tds);
+                    var media = calcularMedia.apply(this, notas);
+
                     linhaAluno.querySelector('.aluno-m').textContent = media;
                     x++;
                 }
 
-                function pegaNota(td){
-                    return parseFloat(td.textContent);
+                function recuperarNumerosDeColunas(tds){
+                    var x = 0;
+                    var arr = [];
+                    while(tds[x]){
+                        if (!isNaN(tds[x].textContent) && tds[x].textContent !== ''){ // "isNaN" = função do JS para verificar se o valor pode ser convertido para número
+                            arr.push(parseFloat(tds[x].textContent));
+                        } 
+                        x++;
+                    }
+                    return arr;
                 }
             })()
         </script>
