@@ -8,12 +8,29 @@
         <meta name="keywords" content="html5, css3, javascript">
         <meta name="viewport" content="width=device-width">
     </head>
-    <!-- problema: percorra todos os parágrafos de uma página e altere o conteúdo de cada um deles para "Este site foi hackeado por DevJota" -->
+    <!-- problema: percorra todos os parágrafos de uma página e altere o conteúdo de cada um deles para "Este site foi hackeado por Fulano" -->
     <body>
         <h1>Javascript</h1>
-
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint dicta hic facilis delectus nam perferendis accusantium suscipit perspiciatis illum ex, quaerat temporibus commodi debitis blanditiis. Illum ratione eum sapiente?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint dicta hic facilis delectus nam perferendis accusantium suscipit perspiciatis illum ex, quaerat temporibus commodi debitis blanditiis. Illum ratione eum sapiente?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint dicta hic facilis delectus nam perferendis accusantium suscipit perspiciatis illum ex, quaerat temporibus commodi debitis blanditiis. Illum ratione eum sapiente?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint dicta hic facilis delectus nam perferendis accusantium suscipit perspiciatis illum ex, quaerat temporibus commodi debitis blanditiis. Illum ratione eum sapiente?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint dicta hic facilis delectus nam perferendis accusantium suscipit perspiciatis illum ex, quaerat temporibus commodi debitis blanditiis. Illum ratione eum sapiente?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint dicta hic facilis delectus nam perferendis accusantium suscipit perspiciatis illum ex, quaerat temporibus commodi debitis blanditiis. Illum ratione eum sapiente?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint dicta hic facilis delectus nam perferendis accusantium suscipit perspiciatis illum ex, quaerat temporibus commodi debitis blanditiis. Illum ratione eum sapiente?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint dicta hic facilis delectus nam perferendis accusantium suscipit perspiciatis illum ex, quaerat temporibus commodi debitis blanditiis. Illum ratione eum sapiente?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint dicta hic facilis delectus nam perferendis accusantium suscipit perspiciatis illum ex, quaerat temporibus commodi debitis blanditiis. Illum ratione eum sapiente?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur sint dicta hic facilis delectus nam perferendis accusantium suscipit perspiciatis illum ex, quaerat temporibus commodi debitis blanditiis. Illum ratione eum sapiente?</p>
         <script>
-            
+            (function(){
+                'use strict';
+                var paragrafos = document.querySelectorAll('p');
+                var x = 0;
+                while(paragrafos[x]){
+                    paragrafos[x].textContent = x + ' - Este site foi hackeado por Fulano 👀';
+                    x++;
+                }
+            })()
         </script>
     </body>
 </html>
