@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Javascript</h1>
+<!--    1. FUNÇÃO CONSTRUTORA 
+        1.1. função utilizada com o operador "new"  -->
+        <script>
+            var Caneta = (function(window){
+                'use strict';
+                function _caneta(preco, cor){ // funções para criar instâncias objetos (função construtora) é comum começar com letra MAIÚSCULA
+                    var color = cor || 'black';
+                    this.preco = preco || 1; // "this" = utilizando com o operador "new", faz referência ao um novo objeto vazio (cria um novo objeto)
+                    this.mudarCor = function(cor){
+                        if(cor !== 'red' && cor !== 'blue' && cor !== 'black')
+                        color = cor;
+                    }
+                    this.pegaCor = function(){
+                        return color;
+                    }
+                }
+            return _caneta;
+            })(window)
+        </script>
+    </body>
+</html>

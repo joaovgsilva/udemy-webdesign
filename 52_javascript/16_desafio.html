@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Javascript</h1>
+
+<!-- problema: será que podemos melhorar o código anterior se tivéssimos uma array contendo os três objetos?! -->
+        <script>
+            var pessoa1 = {
+                nome: 'joao vitor',
+                sobrenome: 'gomes'
+            };
+
+            var pessoa2 = {
+                nome: 'daniel',
+                sobrenome: 'tapias morales'
+            };
+
+            var pessoas = [
+                pessoa1,
+                pessoa2
+            ]
+
+            var x = 0;
+            while(pessoas[x]){
+                console.log(pessoas[x].nome + ' ' + pessoas[x].sobrenome);
+                x++;
+            }
+        </script>
+    </body>
+</html>

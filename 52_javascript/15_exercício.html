@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Javascript</h1>
+
+<!-- problema: temos três objetos; cada objeto tem duas propriedades: nome e sobrenome. precisamos mostrar no console o nome completo de cada um deles -->
+        <script>
+            var pessoa1 = {
+                nome: 'joao vitor',
+                sobrenome: 'gomes'
+            };
+            var pessoa2 = {
+                nome: 'daniel',
+                sobrenome: 'tapias morales'
+            };
+
+            for(var i = 0; i <=3; i++){
+                console.log(window['pessoa'+i].nome + ' ' + window['pessoa'+i].sobrenome);
+            }
+        </script>
+    </body>
+</html>
