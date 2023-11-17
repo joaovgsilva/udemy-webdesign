@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+<!--    eventos no JS: 
+        - um evento é uma ação executada por algo ou alguém (usuário ou browser)
+        - um disparador de evento é o elemento HTML que originou aquele evento
+        - alguns eventos ocorrem de maneira padrão pelo browser (ex.: abrir uma página, submeter um form, etc)
+        - Event Handler (manipulador de evento) é a função a ser executada quando ocorre o evento. ex.: click, mouseover, mouseout, keyup, submit, load...  
+    
+        Event Handler: 
+    
+        DOM level 0 (= maneira mais antiga de atrelar um evento):
+        - no HTML: 
+        <p onclick="função()">  
+        - no JS:
+        p.onclick=funcao 
+    
+        DOM level 2:
+        p.addEventListener("click", funcao);    -->
+        <h1>Javascript</h1>
+
+            <!-- DOM level 0: -->
+        <button id="btn1" onclick="clicar()">Botão 1</button> 
+            <!-- DOM level 2: -->
+        <button id="btn2">Botão 2</button>
+        
+        <script>
+            var btn2 = document.getElementById('btn2'); 
+
+            btn2.onclick = clicar;
+
+            function clicar(){
+                alert('clicou');
+            }
+        </script>
+    </body>
+</html>
