@@ -55,7 +55,7 @@
                 }
             }
 
-            btn3.addEventListener('click', function(){ // = DOM level 2 tem que ter pelo menos 2 (dois) parametros: nome do evento ('click') e a função que será executada ('function()')
+            btn3.addEventListener('click', function(){ // = DOM level 2 tem que ter pelo menos 2 (dois) parâmetros: nome do evento ('click') e a função que será executada ('function()')
                 alert('click DOM level 2');
             });
             btn3.addEventListener('click', function(){ // = com DOM level 2 é possível atrelar 2 (dois) eventos no mesmo elemento HTML
@@ -70,10 +70,21 @@
 
             $d1.addEventListener('click', function(){
                 console.log('click no $d1');
-        }, true); // adicionando o terceiro parametro = é possível alterar a propagação (ordem) do elemento 
+            }, true); // adicionando o terceiro parâmetro = é possível alterar a propagação (ordem) do elemento 
 
-            $d1Span.addEventListener('click', function(){
+            $d1Span.addEventListener('click', function(e){
                 console.log('click no $d1Span');
+//          e.stopPropagation(); // = PARA a propagação do evento
+            }, true);
+
+//          Objeto Event:
+//          - objeto passado por parâmetro para a função que foi atrelada nos fornecendo várias informações adicionais sobre o evento em si. este objeto varia de acordo com o tipo do evento
+            document.addEventListener('click', function(e){
+                console.log('clicou no document');
+                console.log(e.currentTarget); 
+                console.log(this); 
+                // = 'currentTarget' e 'this' são a mesma coisa: elemento a qual foi atrelado o evento 
+                console.log(e.target);
             }, true);
         </script>
     </body>
