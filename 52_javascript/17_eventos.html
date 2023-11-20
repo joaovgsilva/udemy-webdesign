@@ -29,17 +29,30 @@
 
             <!-- DOM level 0: -->
         <button id="btn1" onclick="clicar()">Botão 1</button> 
-            <!-- DOM level 2: -->
         <button id="btn2">Botão 2</button>
+            <!-- DOM level 2: -->
+        <button id="btn3">Botão 3</button>
         
         <script>
-            var btn2 = document.getElementById('btn2'); 
+            var btn2 = document.getElementById('btn2');
+            var btn3 = document.getElementById('btn3');
 
-            btn2.onclick = clicar;
+            btn2.onclick = clicar();
 
             function clicar(){
                 alert('clicou');
+
+                return function(){
+                    alert('clicou 2');
+                }
             }
+
+            btn3.addEventListener('click', function(){ // = DOM level 2 tem que ter pelo menos 2 (dois) parametros: nome do evento ('click') e a função que será executada ('function()')
+                alert('click DOM level 2');
+            });
+            btn3.addEventListener('click', function(){ // = com DOM level 2 é possível atrelar 2 (dois) eventos no mesmo elemento HTML
+                alert('click DOM level 2 com outro evento');
+            });
         </script>
     </body>
 </html>
