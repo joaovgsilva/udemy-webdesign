@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Javascript</h1>
+
+        <form action="#">
+            <label for="txtUser">Usuário</label>
+            <input type="text" id="txtUser" name="user">
+            <br>
+            <label for="txtPass">Senha</label>
+            <input type="password" id="txtPass" name="pass">
+            <br>
+            <button type="button" id="btn">Logar</button>
+        </form>
+
+<!-- problema: validar um formulário de login (usuário e senha) ao clicar no botão de envio. se tiver algum campo vazio deve ser mostrado um alert e impedir o envio -->
+        <script>
+            (function(){
+                'use strict';
+                var $txtUser = document.getElementById('txtUser');
+                var $txtPass = document.getElementById('txtPass');
+                var $btn = document.getElementById('btn');
+
+                $btn.addEventListener('click', function(){
+                    if(!$txtUser.value || !$txtPass.value){
+                        alert('Preencha todos os campos');
+                    }
+                })
+            })()
+        </script>
+    </body>
+</html>
