@@ -11,7 +11,7 @@
     <body>
         <h1>Javascript</h1>
 
-        <textarea id="msg"></textarea>
+        <textarea id="msg" cols="50" rows="10"></textarea>
 
 <!-- problema: num textarea com um número máximo de caracteres permitidos, mostrar numa span o número de caracteres restantes e indicar pro usuário quando restam apenas 10 caracteres -->
         <script>
@@ -25,15 +25,15 @@
                 $txtMsg.addEventListener('keydown', keydown);
 
                 function keypress(e){
-                    console.log('keypress', this.value);
+                    console.log('keypress', this.value); // keypress = só funciona com caracter ou número;
                 }
 
                 function keyup(e){
-                    console.log('keyup', this.value);
+                    console.log('keyup', this.value); // keyup = evento é disparado quando soltamos a tecla pressionada 
                 }
 
                 function keydown(e){
-                    console.log('keydown', this.value);
+                    console.log('keydown', this.value); // keydown = evento é disparado quando pressionamos qualquer tecla
                 }
 
             })()
