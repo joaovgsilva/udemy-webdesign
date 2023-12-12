@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Estrutura Básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="João"> 
+        <meta name="description" content="Curso Web Design">
+        <meta name="keywords" content="html5, css3, javascript">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>Javascript</h1>
+
+        <textarea id="msg"></textarea>
+
+<!-- problema: num textarea com um número máximo de caracteres permitidos, mostrar numa span o número de caracteres restantes e indicar pro usuário quando restam apenas 10 caracteres -->
+        <script>
+            (function(){
+                'use strict';
+
+                var $txtMsg = document.getElementById('msg');
+
+                $txtMsg.addEventListener('keypress', keypress);
+                $txtMsg.addEventListener('keyup', keyup);
+                $txtMsg.addEventListener('keydown', keydown);
+
+                function keypress(e){
+                    console.log('keypress', this.value);
+                }
+
+                function keyup(e){
+                    console.log('keyup', this.value);
+                }
+
+                function keydown(e){
+                    console.log('keydown', this.value);
+                }
+
+            })()
+        </script>
+    </body>
+</html>
