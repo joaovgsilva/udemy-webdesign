@@ -23,17 +23,23 @@
                 $txtMsg.addEventListener('keypress', keypress);
                 $txtMsg.addEventListener('keyup', keyup);
                 $txtMsg.addEventListener('keydown', keydown);
+                $txtMsg.addEventListener('input', input);
 
                 function keypress(e){
                     console.log('keypress', this.value); // keypress = só funciona com caracter ou número;
                 }
 
                 function keyup(e){
-                    console.log('keyup', this.value); // keyup = evento é disparado quando soltamos a tecla pressionada 
+                    console.log('keyup', this.value); // keyup = evento é disparado quando soltamos a tecla pressionada;
                 }
 
                 function keydown(e){
-                    console.log('keydown', this.value); // keydown = evento é disparado quando pressionamos qualquer tecla
+                    console.log('keydown', this.value); // keydown = evento é disparado quando pressionamos qualquer tecla;
+                }
+
+                function input(e){
+                    console.log('input'); // input = evento de entrada de dados;
+                    console.log(this.value);
                 }
 
             })()
